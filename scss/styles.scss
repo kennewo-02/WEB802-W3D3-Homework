@@ -1,0 +1,99 @@
+/* Import */
+@import 'colors';
+@import 'nav';
+
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: $white;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  background: $primary;
+}
+
+nav a {
+    color: $white;
+    text-decoration: none;
+    margin-right: 1em;
+}
+/* Nest Main */
+main {
+  width: 1350px;
+  min-height: 535px;
+  margin: 20px;
+  display: flex;
+  background: $white;
+  justify-content: space-between;
+  align-items: center;
+  color: $white;
+
+  #intro-text {
+    background: $light-gray;
+    padding: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    span {
+      font-family: $fancy-font;
+      font-size: 24px;
+    }
+
+    h3 {
+      color: $dark;
+      font-size: 28px;
+      margin: 20px 0;
+    }
+
+    p {
+      color: $dark;
+      margin-bottom: 20px
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  }
+
+  #intro-image {
+    width: 50%;
+  
+
+    img {
+      width: 100%;
+        height: auto;
+    object-fit: cover;
+    }
+  }
+}
+
+// Mixin or Extend for button
+@mixin buttonStyle {
+  background: $primary;
+  color: $white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondary;
+  }
+}
+
+/* Use Mixin */
+.submit-button {
+  @include buttonStyle;
+}
+
+/* Footer */
+footer {
+  background: $primary;
+  color: $dark;
+  padding: 20px;
+  margin-top: 20px;
+}
